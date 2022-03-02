@@ -3,6 +3,10 @@
 .bloop/
 project/**/metals.sbt
 
+### bloop? ###
+.bsp/
+**/.bsp/
+
 ### SBT ###
 # Simple Build Tool
 # http://www.scala-sbt.org/release/docs/Getting-Started/Directories.html#configuring-version-control
