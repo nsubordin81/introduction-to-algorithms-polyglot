@@ -1,6 +1,6 @@
 @main def hello: Unit = 
   println("Hello world!")
-  println(insertionSort(2::4::3::1::Nil))
+  println(searchingProblem(2::4::3::1::Nil, 4))
 
 
 // simpler instance of unordered list, don't like so much
@@ -40,3 +40,14 @@ def insertionSort(unsorted: List[Int]) =
     if j >= 1
   do returnList = place(returnList, j, x, descendingRule)
   returnList
+
+
+// this was one of the problems in the set. I can't return None becuause Scala considers it a different'
+// type than Int. instead I return -1 since the array index can't be negative. 
+// initialization start loop with first time in the list
+// maintenance, if the item at that location in the list is pointed to then 
+def searchingProblem(items: List[Int], target: Int): Int =
+  for (item, i) <- items.zipWithIndex
+  do if item == target then return i
+  return -1
+  
